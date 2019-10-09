@@ -1,0 +1,18 @@
+FORM 1              FORM 2
+- nama              - nama barang
+- alamat            - kode barang
+- jk                - jenis barang
+- tanggal beli      - harga satuan barang
+- jumlah beli       - jumlah barang
+
+output 1            output 2
+- nama              - kembalian masukan data lagi ? (Y / T) atau N jika Tidak ucapkan TERIMA KASIH
+- alamat            ket :
+- jk                - harus login dahulu
+- jumlah            - jika sudah login dan akses halaman login kembali maka otomatis pindah ke halaman utama
+- tanggal beli     
+
+DISKON
+- belanja > 500.000 = 20%
+- belanja > 250.000 = 10%
+- belanja > 150.000 = 5%
