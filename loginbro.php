@@ -1,21 +1,19 @@
 <?php
-
-session_start();
-if (isset($_POST['Login'])) {
-    $a = $_POST['user'];
-    $b = $_POST['pass'];
-    
-    if ($a == "kipli" && $b == "123") {
-        $_SESSION['login'] = $a;
-        // echo "<h1>Anda berhasil LOGIN</h1>";
-        // echo "<h2>Klik <a href='tugas_array.php'>Disini</a>
-        //       untuk menuju ke Form Array";
+    session_start();
+    if (isset($_POST['Login'])) {
+        $a = $_POST['user'];
+        $b = $_POST['pass'];
+        
+        if ($a == "kipli" && $b == "123") {
+            $_SESSION['log'] = $a;
+            header("location:form1.php");
+            // echo "<h1>Anda berhasil LOGIN</h1>";
+            // echo "<h2>Klik <a href='tugas_array.php'>Disini</a>
+            //       untuk menuju ke Form Array";
+            
+        } 
     } else {
-        die("Username Atau Password Anda Salah 
-        Silahkan <a href=loginbro.php> Login </a> Kembali");
-    }
-} else {
-    ?>
+?>
 
     <html>
     <head>
@@ -38,16 +36,16 @@ if (isset($_POST['Login'])) {
         <a class="nav-link" href="index.php">Halaman Utama <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="form1.php">Form 1 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="form2.php">Form 2 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="loginbro.php">Log-in <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="logoutbro.php">Log-out <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -62,9 +60,9 @@ if (isset($_POST['Login'])) {
       <div class="card">
         <div class="card-header"><b></b>
           <div class="card-body">
-            <form action="form1.php" method="POST">
+            <form action="" method="POST">
             <div class="form-group">
-                <label for=""><b><h1>LOG-IN HERE</h1></b></label><br><br>
+                <label for=""><b><h1>LOG-IN DISINI BRO</h1></b></label><br><br>
                 <label for=""><b>USERNAME : </b></label>
                 <input type="text" name="user" class="form-control" required><br>
             </div>
@@ -90,6 +88,9 @@ if (isset($_POST['Login'])) {
         <script src="/assets/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
-<?php
-}
+<?php 
+  } 
+  if (isset($_SESSION['log'])) {
+    header("Location:form1.php");
+  }
 ?>

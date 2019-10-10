@@ -1,4 +1,7 @@
-
+<?php 
+    session_start();
+    if (isset ($_SESSION['log'])) {
+?>
 
 <html>
 <head>
@@ -21,16 +24,16 @@
         <a class="nav-link" href="index.php">Halaman Utama <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="form1.php">Form 1 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="form2.php">Form 2 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="loginbro.php">Log-in <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="logoutbro.php">Log-out <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -116,4 +119,9 @@
 
 <?php
     }
+?>
+<?php }
+        else {
+        header ("Location:loginbro.php");
+        }
 ?>

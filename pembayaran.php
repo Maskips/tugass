@@ -20,16 +20,22 @@
         <a class="nav-link" href="index.php">Halaman Utama <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="form1.php">Form 1 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="form2.php">Form 2 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="loginbro.php">Log-in <span class="sr-only">(current)</span></a>
+        <a class="nav-link">||<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="logoutbro.php">Log-out <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="logoutbro.php">Log-out Bro <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -71,7 +77,7 @@
                     if(isset($_POST['proses'])){?>
                     <div class="form-group">
                         <div class="page-header"><h2 align="center">TERIMA KASIH TELAH BER-BELANJA DI TOKO SAYA </h2><br>
-                        <h2 align="center">SEE YOU</h2>
+                        <h2 align="center">SEE YOU BRO</h2>
                         </div>
                     </div>
                     <?php
@@ -84,8 +90,8 @@
     </div>
 </div>
 
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.bundle.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
