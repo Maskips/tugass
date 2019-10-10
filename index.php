@@ -40,7 +40,10 @@
         <div class="card-header"><b></b>
           <div class="card-body">
             <center><b><h1>SELAMAT DATANG DI</h1></b></center>
-            <center><b><h2>TOKO SAYA</h2></b></center>
+            <center><b><h2>TOKO SAYA</h2></b></center><br><br>
+            <center><b><h4>JIKA ANDA INGIN BELANJA DI TOKO KAMI , SILAHKAN LOGIN TERLEBIH DAHULU</h4></b></center>
+              <a class="nav-link" href="loginbro.php">Login Disini Bro.<span class="sr-only">(current)</span></a>
+            
           </div>  
         </div>
       </div>

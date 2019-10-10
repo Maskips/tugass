@@ -44,16 +44,24 @@
         <div class="card-header"><b></b>
           <div class="card-body">
             <?php
-                session_start();
-                if (isset($_SESSION['Login'])) {
-                    unset($_SESSION);
+              session_start();
+              if (isset($_SESSION['login'])) {
+                unset ($_SESSION);
                 session_destroy();
-                header("location:loginbro.php");
-                }
-                echo "<h2>Anda Berhasil Log-out :)</h2>";
+                echo "<script>
+                alert('Anda Berhasil Logout!');
+                document.location.href = 'index.php';
+                </script>";
+              }
+              else{
+                echo "<script>
+                alert('Anda Berhasil Logout!');
+                document.location.href = 'index.php';
+                </script>";
+              } 
             ?>
             <nav>
-                <a href="loginbro.php">Login Kembali</a>
+                <a href="loginbro.php">Login Kembali ?</a>
             </nav>
           </div>  
         </div>

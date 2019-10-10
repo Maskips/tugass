@@ -1,4 +1,5 @@
 
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -93,11 +94,11 @@
                             <button type="reset" class="btn btn-warning">R E S E T</button>
                         </div>
 
-                            <input type="hidden" name="nama"   value="<?php echo "$nama"; ?>">
-                            <input type="hidden" name="alamat" value="<?php echo "$alamat"; ?>">
-                            <input type="hidden" name="jk"     value="<?php echo "$jk"; ?>">
-                            <input type="hidden" name="tglbeli"   value="<?php echo "$tglbeli"; ?>">
-                            <input type="hidden" name="jumlahbeli" value="<?php echo "$jumlahbeli"; ?>">
+                            <input type="hidden" name="nama"   value="<?php echo $nama; ?>">
+                            <input type="hidden" name="alamat" value="<?php echo $alamat; ?>">
+                            <input type="hidden" name="jk"     value="<?php echo $jk; ?>">
+                            <input type="hidden" name="tglbeli"   value="<?php echo $tglbeli; ?>">
+                            <input type="hidden" name="jumlahbeli" value="<?php echo $jumlahbeli; ?>">
             
                     </form>
                         

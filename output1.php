@@ -1,3 +1,5 @@
+
+            
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -36,13 +38,11 @@
 <br>
 
 <div class="container" style="padding:20px;">
-  <div class="page-header"><h1 align="center">Hasil Akhir</h1></div>
     <div class="row" style="padding:20px;">
       <div class="col-md-12">
         <div class="card">
-            <div class="card-header">Output</div>
-            <?php
-            if(isset($_POST['simpan'])){
+        <?php
+            if(isset($_POST['submit'])){
                 $namabrg     = $_POST['namabrg'];
                 $kodebrg     = $_POST['kodebrg'];
                 $jenisbrg    = $_POST['jenisbrg'];
@@ -58,24 +58,24 @@
             ?>
             <div class="card-body">
                 <div class="table-responsive">
-                    <div class="form-control"><center>*DATA DIRI PEMBELI*</center></div>
+                    <center><h3><b>*DATA DIRI PEMBELI*</b></h3></center>
                     <table class="table">
                         <tr>
-                            <th>NAMA :</th>
-                            <th>ALAMAT :</th>
-                            <th>JENIS KELAMIN :</th>
-                            <th>TANGGAL PEMBELIAN :</th>
-                            <th>JUMLAH :</th>
+                            <th>NAMA </th>
+                            <th>ALAMAT </th>
+                            <th>JENIS KELAMIN </th>
+                            <th>TANGGAL PEMBELIAN </th>
+                            <th>JUMLAH </th>
                         </tr>
                         <tr>
-                            <td><?= $nama; ?></td>
-                            <td><?= $alamat; ?></td>
-                            <td><?= $jk; ?></td>
-                            <td><?= $tglbeli; ?></td>
-                            <td><?= $jumlahbeli; ?></td>
+                            <td><?php echo $nama; ?></td>
+                            <td><?php echo $alamat; ?></td>
+                            <td><?php echo $jk; ?></td>
+                            <td><?php echo $tglbeli; ?></td>
+                            <td><?php echo $jumlahbeli; ?></td>
                         </tr>
-                    </table>
-                    <div class="form-control"><center>*DAFTAR PEMBELIAN BUKU*</center></div>
+                    </table><br>
+                    <center><h3><b>*DAFTAR PEMBELIAN BAJU*</b></h3></center>
                     <table class="table">
                         <tr>
                             <th>NO</th>
@@ -100,8 +100,8 @@
                             <?php $total += $hargasatuan[$key]*$jumlahbrg[$key]; ?>
                         </tr>
                         <?php } ?>
-                    </table>
-                    <div class="form-control"><center>Pembayaran</center></div>
+                    </table><br>
+                    <center><h3><b>*PEMBAYARAN*</b></h3></center>
                     <table class="table">
                         <?php
                         $a = $total;
@@ -142,15 +142,14 @@
                     </table>
                     
                     <table class="table">
-                    <form action="input3.php" method="post">
+                    <form action="pembayaran.php" method="post">
                         <input type="hidden" name="total" value="<?= $c; ?>">
                         <input type="hidden" name="hargabrg[]" value="<?= $hargasatuan[$key]; ?>">
                         <input type="hidden" name="jumlahbrg[]" value="<?= $jumlahbrg[$key]; ?>">
-
                         <tr>
                             <th>Masukan Pembayaran</th>
                             <th><input type="number" min="<?= $c; ?>" name="num" id="" placeholder="Masukan Pembayaran">
-                                <button type="submit" name="byr" class="btn btn-primary">Bayar</button>
+                                <button type="submit" name="byr" class="btn btn-primary">B A Y A R</button>
                             </th>
                         </tr>    
                     </form>
