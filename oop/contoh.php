@@ -5,7 +5,7 @@
         public $pekerjaan;
         public $tahun_bekerja;
         private $gjmanager = 5000000;
-        private $gjob = 500000;
+        private $gjob = 5000000;
         protected $gaji;
 
         public function setdata($nama="Mahmud", $pekerjaan="ob", $tahun_bekerja="7") {
@@ -30,9 +30,9 @@
     $karyawan = new Karyawan();
     $karyawan->setdata();
 
-    echo "- Nama : $karyawan->nama <br>";
-    echo "- Pekerjaan : $karyawan->pekerjaan <br>";
-    echo "- Tahun Bekerja : $karyawan->tahun_bekerja <br>";
-    echo "- Gaji : " . number_format ($karyawan->getdata(), 0, ",",".") . "<br>";
+    echo "Nama = $karyawan->nama <br>";
+    echo "Pekerjaan = $karyawan->pekerjaan <br>";
+    echo "Tahun Bekerja = $karyawan->tahun_bekerja <br>";
+    echo "Gaji = " . number_format ($karyawan->getdata(), 0, ",",".") . "<br>";
 
 ?>
