@@ -23,11 +23,11 @@ class Biodata extends Databasee {
         return $datasiswa;
     }
     // Menambah Data
-    public function create($nama, $alamat, $tgl_lahir, $jk, $agama)
+    public function create($nama, $alamat, $tgl_lahir, $jk, $agama, $umur)
     {
         
-        mysqli_query($this->koneksi,"insert into biodata values('','$nama','$alamat','$tgl_lahir','$jk',
-        '$agama')");
+        mysqli_query($this->koneksi,"insert into biodata values(null,'$nama','$alamat','$tgl_lahir','$jk',
+        '$agama','$umur')");
     }
     // Menampilkan Data Berdasarkan ID
     public function show($id)
@@ -42,10 +42,10 @@ class Biodata extends Databasee {
         return $datasiswa;
     }
     // mengupdate data berdasarkan id
-    public function update($id, $nama, $alamat, $tgl_lahir, $jk, $agama)
+    public function update($id, $nama, $alamat, $tgl_lahir, $jk, $agama, $umur)
     {
         mysqli_query($this->koneksi,"update biodata set nama='$nama', alamat='$alamat', tgl_lahir='$tgl_lahir',
-        jk='$jk', agama='$agama' where id='$id'");
+        jk='$jk', agama='$agama', umur='$umur' where id='$id'");
     }
     // menghapus data berdasarkan id
     public function delete($id)

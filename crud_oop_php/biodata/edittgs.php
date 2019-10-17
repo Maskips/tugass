@@ -1,8 +1,7 @@
 <?php
-    include 'databasee.php';
+    include '../databasee.php';
     $siswa = new Biodata();
 ?>
-
 
 <html>
 <head>
@@ -19,40 +18,52 @@
 <body>
     <?php
         foreach ($siswa->edit($_GET['id']) as $data) {
+            $id = $data['id'];
+            $nama = $data['nama'];
+            $alamat = $data['alamat'];
+            $tgl_lahir = $data['tgl_lahir'];
+            $jk = $data['jk'];
+            $agama = $data['agama'];
+        }
     ?>
     <fieldset>
         <legend>Edit Biodata</legend>
-        <form action="prosestgs.php" method="POST">
+        <form action="prosestgs.php?aksi=update" method="POST">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <table>
                 <tr>
                     <th>Nama </th>
-                    <td><input type="text" name="nama" value="<?php echo $data['nama']; ?>"required></td>
+                    <td><input type="text" name="nama" value="<?php echo $nama; ?>"required></td>
                 </tr>
                 <tr>
                     <th>Alamat </th>
-                    <td><textarea name="alamat" cols="40" required><?php echo $data['alamat']; ?></textarea></td>
+                    <td><textarea name="alamat" cols="40" required><?php echo $alamat; ?></textarea></td>
                 </tr>
                 <tr>
                     <th>Tanggal Lahir </th>
-                    <td><input type="text" name="tgl_lahir" value="<?php echo $data['tgl_lahir']; ?>"required></td>
+                    <td><input type="date" name="tgl_lahir" value="<?php echo $tgl_lahir; ?>"required></td>
                 </tr>
                 <tr>
                     <th>Jenis Kelamin </th>
-                    <td><input type="text" name="jk" value="<?php echo $data['jk']; ?>"required></td>
+                    <td><input type="radio" name="jk" value="Laki-Laki">Laki-Laki</td><br>
+                    <td><input type="radio" name="jk" value="Perempuan">Perempuan</td>
                 </tr>
                 <tr>
                     <th>Agama </th>
-                    <td><input type="text" name="agama" value="<?php echo $data['agama']; ?>"required></td>
+                    <td><select name="agama" class="form-control">
+                    <option>P I L I H</option>
+                    <option>- Islam</option>
+                    <option>- Kristen</option>
+                    <option>- Hindu</option>
+                    <option>- Budha</option>
+                    <option>- Katolik</option>
+                  </select></td>
                 </tr>
                 <tr>
-                    <th><input type="submit" name="save" value="Simpan"</th>
+                    <th><input type="submit" class="btn btn-success" name="save" value="Simpan"</th>
                 </tr>
             </table>
         </form>
     </fieldset>
-    <?php
-        }
-    ?>
 </body>
 </html>

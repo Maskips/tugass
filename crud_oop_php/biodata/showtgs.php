@@ -14,35 +14,39 @@
 </head>
 <body>
     <?php
-        foreach ($siswa->show($_GET['id']) as $data) {        
+        foreach ($siswa->show($_GET['id']) as $data) {  
+            $id = $data['id'];
+            $nama = $data['nama'];
+            $alamat = $data['alamat'];
+            $tgl_lahir = $data['tgl_lahir'];
+            $jk = $data['jk'];
+            $agama = $data['agama'];
+        }      
     ?>
     <fieldset>
         <legend><b>SHOW BIODATA</b></legend><br>
             <table>
                 <tr>
                     <th>Nama </th>
-                    <td><input type="text" name="nama" value="<?php echo $data['nama']; ?>"required></td>
+                    <td><input type="text" name="nama" value="<?php echo $nama; ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>Alamat </th>
-                    <td><textarea name="alamat" cols="21" value="<?php $data['alamat']; ?>"required></textarea></td>
+                    <td><textarea name="alamat" cols="21" value="<?php echo $alamat; ?>" readonly></textarea></td>
                 </tr>
                 <tr>
                     <th>Tanggal Lahir </th>
-                    <td><input type="text" name="tgl_lahir" value="<?php echo $data['tgl_lahir']; ?>"required></td>
+                    <td><input type="text" name="tgl_lahir" value="<?php echo $tgl_lahir; ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>Jenis Kelamin </th>
-                    <td><input type="text" name="jk" value="<?php echo $data['jk']; ?>"required></td>
+                    <td><input type="text" name="jk" value="<?php echo $jk; ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>Agama </th>
-                    <td><input type="text" name="agama" value="<?php echo $data['agama']; ?>"required></td>
+                    <td><input type="text" name="agama" value="<?php echo $agama; ?>" readonly></td>
                 </tr>
             </table><br>
     </fieldset>
-<?php 
-    }
-?>
 </body>
 </html>
