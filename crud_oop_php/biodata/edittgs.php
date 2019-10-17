@@ -5,15 +5,10 @@
 
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <title>Edit Biodata</title>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <?php
@@ -26,44 +21,71 @@
             $agama = $data['agama'];
         }
     ?>
-    <fieldset>
-        <legend>Edit Biodata</legend>
-        <form action="prosestgs.php?aksi=update" method="POST">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <table>
-                <tr>
-                    <th>Nama </th>
-                    <td><input type="text" name="nama" value="<?php echo $nama; ?>"required></td>
-                </tr>
-                <tr>
-                    <th>Alamat </th>
-                    <td><textarea name="alamat" cols="40" required><?php echo $alamat; ?></textarea></td>
-                </tr>
-                <tr>
-                    <th>Tanggal Lahir </th>
-                    <td><input type="date" name="tgl_lahir" value="<?php echo $tgl_lahir; ?>"required></td>
-                </tr>
-                <tr>
-                    <th>Jenis Kelamin </th>
-                    <td><input type="radio" name="jk" value="Laki-Laki">Laki-Laki</td><br>
-                    <td><input type="radio" name="jk" value="Perempuan">Perempuan</td>
-                </tr>
-                <tr>
-                    <th>Agama </th>
-                    <td><select name="agama" class="form-control">
-                    <option>P I L I H</option>
-                    <option>- Islam</option>
-                    <option>- Kristen</option>
-                    <option>- Hindu</option>
-                    <option>- Budha</option>
-                    <option>- Katolik</option>
-                  </select></td>
-                </tr>
-                <tr>
-                    <th><input type="submit" class="btn btn-success" name="save" value="Simpan"</th>
-                </tr>
-            </table>
-        </form>
-    </fieldset>
+
+<div class="container">
+  <div class="row" style="padding: 20px;">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><b></b>
+          <div class="card-body">
+
+<form action="prosestgs.php?aksi=update" method="POST">
+  <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <legend>Edit Biodata</legend> 
+        <table>
+            <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label"><b>NAMA LENGKAP</b></label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>"required>
+                </div>
+            </div>
+            <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label"><b>ALAMAT</b></label>
+                <div class="col-sm-10">
+                <textarea name="alamat" class="form-control" cols="40" required> <?php echo $alamat; ?></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label"><b>TANGGAL LAHIR</b></label>
+                <div class="col-sm-10">
+                <input type="date" class="form-control" name="tgl_lahir" value="<?php echo $tgl_lahir; ?>"required>
+                </div>
+            </div>
+            <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label"><b>JENIS KELAMIN</b></label>
+                <div class="col-sm-10">
+                <input type="radio" name="jk" value="Laki-Laki" 
+                    <?php if ($jk == "Laki-Laki") { ?> checked <?php } ?>>Laki-Laki<br>
+                <input type="radio" name="jk" value="Perempuan"
+                    <?php if ($jk == "Perempuan") { ?> checked <?php } ?>>Perempuan
+                </div>
+            </div>
+            <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label"><b>AGAMA</b></label>
+                <div class="col-sm-10">
+                <select name="agama" class="form-control">
+                    <option value="Islam"   <?php if ($agama == "Islam") { ?> selected <?php } ?>>- Islam</option>
+                    <option value="Kristen" <?php if ($agama == "Kristen") { ?> selected <?php } ?>>- Kristen</option>
+                    <option value="Hindu"   <?php if ($agama == "Hindu") { ?> selected <?php } ?>>- Hindu</option>
+                    <option value="Budha"   <?php if ($agama == "Budha") { ?> selected <?php } ?>>- Budha</option>
+                    <option value="Katolik" <?php if ($agama == "Katolik") { ?> selected <?php } ?>>- Katolik</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <input type="submit" align="center" class="btn btn-success" name="save" value="Simpan">
+                </div>
+            </div>
+        </table>
+</form>
+
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
