@@ -31,7 +31,7 @@
 
 <form action="prosestgs.php?aksi=update" method="POST">
   <input type="hidden" name="id" value="<?php echo $id; ?>">
-    <legend>Edit Biodata</legend> 
+    <center><legend><b>EDIT BIODATA</b></legend></center><br> 
         <table>
             <div class="form-group row">
             <label for="" class="col-sm-2 col-form-label"><b>NAMA LENGKAP</b></label>
@@ -71,15 +71,16 @@
                     <option value="Katolik" <?php if ($agama == "Katolik") { ?> selected <?php } ?>>- Katolik</option>
                 </select>
                 </div>
-            </div>
+            </div><br>
             <div class="form-group row">
                 <div class="col-sm-10">
-                <input type="submit" align="center" class="btn btn-success" name="save" value="Simpan">
+                    <input type="submit" class="btn btn-success" name="save" value="S I M P A N">
+                        <a href="indextgs.php" class="btn btn-warning">K E M B A L I</a>
+                    </div>
                 </div>
             </div>
         </table>
 </form>
-
           </div>  
         </div>
       </div>

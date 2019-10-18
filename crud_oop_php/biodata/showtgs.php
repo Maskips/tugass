@@ -29,7 +29,7 @@
         <div class="card-header"><b></b>
           <div class="card-body">            
             
-    <legend><b>SHOW BIODATA</b></legend><br>
+    <center><legend><b>SHOW BIODATA</b></legend></center><br><br>
         <table>
             <div class="form-group row">
             <label for="" class="col-sm-2 col-form-label"><b>NAMA LENGKAP</b></label>
@@ -52,10 +52,11 @@
             <div class="form-group row">
             <label for="" class="col-sm-2 col-form-label" readonly><b>JENIS KELAMIN</b></label>
                 <div class="col-sm-10">
-                <input type="radio" name="jk" value="Laki-Laki" readonly
-                    <?php if ($jk == "Laki-Laki") { ?> checked <?php } ?>>Laki-Laki<br>
-                <input type="radio" name="jk" value="Perempuan" readonly
-                    <?php if ($jk == "Perempuan") { ?> checked <?php } ?>>Perempuan
+                <?php if ($jk == "Laki-Laki") { ?>
+                <input type="radio" name="jk" value="Laki-Laki" checked readonly>Laki-Laki<br>
+                <?php } elseif ($jk == "Perempuan") { ?>
+                <input type="radio" name="jk" value="Perempuan" checked readonly>Perempuan
+                <?php } ?>
                 </div>
             </div>
             <div class="form-group row">
@@ -66,7 +67,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-10">
-                <a href="indextgs.php" class="btn btn-warning">KEMBALI</a>
+                <a href="indextgs.php" class="btn btn-warning">K E M B A L I</a>
                 </div>
             </div>
         </table>

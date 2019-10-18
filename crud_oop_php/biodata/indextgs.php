@@ -11,7 +11,14 @@
         <title>Index CRUD BOOTSTRAP</title>
 </head>
 <body>
-<br><br>
+<br>
+<div class="container">
+  <div class="row" style="padding: 20px;">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><b></b>
+          <div class="card-body">
+
   <center><a href="createtgs.php">INPUT BIODATA</a></center><br><br>
     <table class="table table-striped">
         <tr>
@@ -45,5 +52,12 @@
             } 
         ?>
     </table>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

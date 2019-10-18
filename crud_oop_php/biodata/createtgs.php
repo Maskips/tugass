@@ -6,8 +6,8 @@
     <title>Create Biodata</title>
 </head>
 <body><br><br>
-<center>I N P U T</center>
-<center>B I O D A T A</center><br>
+<center><b>I N P U T</b></center>
+<center><b>B I O D A T A</b></center><br>
 
 <div class="container">
   <div class="row" style="padding: 20px;">
@@ -18,25 +18,25 @@
             
             <form action="prosestgs.php?aksi=tambah" method="POST">
               <div class="form-group">
-                <label for="">Nama :</label>
-                  <input type="text" class="form-control" name="nama">
+                <label for=""><b>NAMA LENGKAP :</b></label>
+                  <input type="text" class="form-control" name="nama"><br>
               </div>
               <div class="form-group">
-                <label for="">Alamat :</label>
-                  <textarea class="form-control" name="alamat" rows="3"></textarea>
+                <label for=""><b>ALAMAT :</b></label>
+                  <textarea class="form-control" name="alamat" rows="3"></textarea><br>
               </div>
               <div class="form-group">
-                <label for="">Tanggal Lahir :</label>
-                  <input type="date" class="form-control" name="tgl_lahir">
+                <label for=""><b>TANGGAL LAHIR :</b></label>
+                  <input type="date" class="form-control" name="tgl_lahir"><br>
               </div>
               <div class="form-group">
-                <label for="">Jenis Kelamin :</label><br>
+                <label for=""><b>JENIS KELAMIN :</b></label><br>
                   <input type="radio" name="jk" value="Laki-Laki">Laki-Laki<br>
-                  <input type="radio" name="jk" value="Perempuan">Perempuan
+                  <input type="radio" name="jk" value="Perempuan">Perempuan<br>
               </div>
               <div class="form-group">
-                <label for="">Agama :</label><br>
-                  <select name="agama" class="form-control">
+                <label for=""><b>AGAMA :</b></label><br>
+                  <select name="agama" class="form-control"><br>
                     <option>P I L I H</option>
                     <option>- Islam</option>
                     <option>- Kristen</option>
@@ -47,6 +47,7 @@
               </div><br>
               <div class="form-group">
                 <button type="submit" name="save" class="btn btn-primary">S I M P A N</button>
+                  <a href="indextgs.php" class="btn btn-warning">K E M B A L I</a>
               </div>
             </form>
 
